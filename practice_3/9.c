@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+  int n, count = 0;
+
+  scanf("%d", &n);
+
+  while(1) {
+    if(!n)
+      break;
+
+    count++;
+    n /= 10;
+  }
+
+  printf("%d", count);
+
+  return 0;
+}
