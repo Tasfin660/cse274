@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 int main() {
-  int p1 = 1, p2 = 1, next, n = 15;
+  int n, p1 = 1, p2 = 1, next;
+
+  scanf("%d", &n);
 
   if (n >= 1)
     printf("%d ", p1);
@@ -11,6 +13,7 @@ int main() {
   for (int i = 3; i <= n; i++) {
     next = p1 + p2;
     printf("%d ", next);
+
     p1 = p2;
     p2 = next;
   }

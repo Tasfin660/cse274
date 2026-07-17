@@ -7,10 +7,7 @@ int main() {
 
   int temp = n;
 
-  while (1) {
-    if(!n)
-      break;
-
+  while (n) {
     reverse_n = (reverse_n * 10) + n % 10;
     n /= 10;
   }

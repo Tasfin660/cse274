@@ -7,8 +7,10 @@ int main() {
 
   if (n <= 1)
     isPrime = 0;
+  else if (n > 2 && n % 2 == 0)
+    isPrime = 0;
   else {
-    for (int i = 2; i * i <= n; i++) {
+    for (int i = 3; i * i <= n; i += 2) {
       if (n % i == 0) {
         isPrime = 0;
         break;
@@ -17,9 +19,9 @@ int main() {
   }
 
   if (isPrime == 0)
-    printf("Not prime.\n");
+    printf("Not prime\n");
   else
-    printf("Prime.\n");
+    printf("Prime\n");
 
   return 0;
 }
